@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras de control, bucles y variables numéricas</title>
+    <link href="css/estilos.css" rel="stylesheet">
+    <script src="js/funciones.js"></script>    
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Estructuras de control, bucles y variables numéricas en JavaScript</h1>
+
+        <h2>Ejercicios</h2>
+        <div class="ejercicio">
+            <h3>Nota para realizar los ejercicios</h3>
+            <p>Al realizar estos ejercicos, se debe asegurar que los datos a introducir no están vacíos y son correctos. Si esto ocurre se debe mostrar un mensaje de error y volver a solicitar los datos.</p>
+        </div>
+        <div class="ejercicio">
+            <h3>Ejercicio 1</h3>
+            <p>Realice una función JavaScript que pida un número por teclado entre 1 y 7 y muestre un mensaje indicando a qué día de la semana corresponde. Por ejemplo, 1 sería lunes, 2 martes, etc.</p>
+            <p>Utilice la función <span>document.getElementById().value</span> y la estructura de control <span>if - else</span></p>
+            <label>Introduce un número: </label>
+            <input id="numero_ejercicio3" type="number">
+            <button onclick="calcularDiaSemana1();">Ejecutar</button>
+            <p id="parrafo1" class="parrafo">
+            </p>
+        </div>
+        <div class="ejercicio">
+            <h3>Ejercicio 2</h3>
+            <p>Realice una función JavaScript que pida un número por teclado entre 1 y 7 y muestre un mensaje indicando a qué día de la semana corresponde. Por ejemplo, 1 sería lunes, 2 martes, etc.</p>
+            <p>Utilice la función <span>document.getElementById().value</span> y la estructura de control <span>switch</span></p>
+            <label>Introduce un número: </label>
+            <input id="numero_ejercicio4" type="number">
+            <button onclick="calcularDiaSemana2();">Ejecutar</button>
+            <p id="parrafo2" class="parrafo">
+            </p>
+        </div>   
+        <div class="ejercicio">
+            <h3>Ejercicio 3</h3>
+            <p>Realice una función JavaScript que pida un número por teclado enre 1 y 10 simulando una nota numérica, y muestre un mensaje indicando la calificación obtenida teniendo en cuenta los siguientes rangos:
+                <ul>
+                    <li>Insuficiente: (0, 5)</li>
+                    <li>Suficiente: (5, 6)</li>
+                    <li>Bien: (6, 7)</li>
+                    <li>Notable: (7, 9)</li>
+                    <li>Sobresaliente: [9, 10]</li>
+                </ul>
+            </p>
+            <p>Utilice un elemento de tipo <span>input</span> y la propiedad <span>getElementById</span> para leer la nota, y la estructura de control <span>if - else</span></p>
+            <p>Deberá mostrar el mensaje de texto en el párrafo que tiene el identificador <b>parrafo3</b> haciendo uso de la propiedad <span>innerHTML</span>.</p>
+            <input id="nota" type="number"></input>
+            <button onclick="calcularNotas();">Ejecutar</button>
+            <p id="parrafo3" class="parrafo">
+            </p>
+        </div>
+        <div class="ejercicio">
+            <h3>Ejercicio 4</h3>
+            <p>Realice una función JavaScript que pida dos números por teclado y seleccionar una operación de un desplegable. Luego debe mostrar un mensaje indicando el resultado de la operación, o un mensaje de error si lo hubiera.
+            </p>
+            <p>Utilice dos elemento de tipo <span>input</span>, otro de tipo <span>select</span> y la propiedad <span>getElementById</span> para leer los datos</p>
+            <p>Deberá mostrar el mensaje de texto en el párrafo que tiene el identificador <b>parrafo4</b> haciendo uso de la propiedad <span>innerHTML</span>. Los resultados deben mostrarse con dos múmeros decimales</p>
+            <input id="numero1" type="number"></input>
+            <select id="operacion">
+                <option value="sumar">+</option>
+                <option value="restar">-</option>
+                <option value="multiplicar">*</option>
+                <option value="dividir">/</option>
+            </select>
+            <input id="numero2" type="number"></input>
+            <button onclick="calcularOperacion();">Ejecutar</button>
+            <p id="parrafo4" class="parrafo">
+            </p>
+        </div>
+
+        <div class="ejercicio">
+            <h3>Ejercicio 5</h3>
+            <p>Realice una función JavaScript que pida un número de nif (solo el número) y muestre un mensaje indicando ese nif con la letra correspondiente.</p>            
+            <p>Utilice un elemento de tipo <span>input</span> y la propiedad <span>getElementById</span> para leer el número, y la estructura de control que considere más apropiada.</p>
+            <p>Deberá mostrar el mensaje de texto en el párrafo que tiene el identificador <b>parrafo5</b> haciendo uso de la propiedad <span>innerHTML</span>.</p>
+            <p>Deberá hacer uso del operador matemático <span>%</span> para calcular el resto de una división.</p>
+            <p>
+                🔗 <a href="https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/tramites-y-gestiones/dni/calculo-del-digito-de-control-del-nif-nie/" target="_blank">Cálculo del dígito de control del NIF/NIE</a>
+            </p>
+            <p>
+                🔗 <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Remainder">Operador resto (%) en JavaScript</a>
+            </p>
+            <input id="nif" type="number"></input>
+            <button onclick="calcularNIF();">Ejecutar</button>
+            <p id="parrafo5" class="parrafo">
+        </div>
+        <div class="ejercicio">
+            <h3>Ejercicio 6</h3>
+            <p>Realice una función JavaScript que pida un número entre 1 y 10, y simule el lanzamiento del número de dados que se la leído por teclado.</p>
+            <ul>
+                <li>Utilice la función <span>prompt</span> para leer el úmero de datos por teclado.</li>
+                <li>Una vez leído el número de dados utilice la estructura de control que considere más apropiada para comprobar si el número leído es incorrecto. Si el número leído es incorrecto muestre un mensaje de error y finalice la ejecución de la función con la instrucción <span>return</span>.</li>
+                <li>Utilice un bucle <span>for</span> para simular el lanzamiento del número de datos que ha leído por teclado.</li>
+                <li>Dentro del bucle for utilice la función <span>getRandomIntNumber</span> para generar un número aleaotorio entre 1 y 6.</li>
+                <li>Utilice la función <span>document.createElement</span> para crear los elementos de tipo <span>img</span>.</li>
+                <li>Cuando cree el elemento de tipo <span>img</span> tendrá que asignarle las propiedades <span>src</span>, <span>widht</span> y <span>height</span>.</li>
+                <li>Las imágenes del dado las puede encontrar en el directorio <span>images</span>.</li>
+                <li>Una vez creado el elemento <span>img</span> utilice la función <span>appendChild</span> para añadirlo al elemento <b>párrafo1</b> del documento.</li>
+            </ul>
+            <p>
+                🔗 <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Números aleatorios en JavaScript</a>
+            </p>
+            <p>
+                🔗 <a href="https://developer.mozilla.org/es/docs/Web/API/Document/createElement">Función <span>createElement</span></a>
+            </p>
+            <p>
+                🔗 <a href="https://developer.mozilla.org/es/docs/Web/API/Node/appendChild">Función <span>appendChild</span></a>
+            </p>
+            <button onclick="mostrarDados();">Ejecutar</button>
+            <p id="parrafo6" class="parrafo">
+            </p>
+        </div>
+        <div class="ejercicio">
+            <h3>Ejercicio 7</h3>
+            <p>Realice una función JavaScript para descubrir el número que "pinesa" el ordenador en un número máximo de intentos determinado. Para ello operaremos de la siguiente forma:</p>
+            <ul>
+                <li>Utilice un elemento de tipo <span>input</span> y la propiedad <span>getElementById</span> para leer el número más alto que puede pensar el ordenador.</li>
+                <li>Utilice otro elemento de tipo <span>input</span> y la propiedad <span>getElementById</span> para leer el número máximo de intentos que tendremos para descubrir el número.</li>
+                <li>Una vez pulsado el botón, utilice la función <span>getRandomIntNumber</span> para generar un número aleaotorio entre 1 y el número introducido en el primer punto por el usuario.</li>
+                <li>Utilice la función <span>prompt</span> para ir leyendo consecutivamente los número que introducirá el usuario para intentar adivinar el número secreto.</li>
+                <li>Si el número introducido no coincide con el número secreto, se deberá indicar en un mensaje de tipo <span>alert</span> si el número es mayor o menor del número secreto.</li>
+                <li>El juego termina cuando el usuario acierta el número o se han acabado el número de intentos indicados en el segundo punto.</li>
+                <li>Si el usuario acierta el número, se deberá indicar un mensaje de felicitación en el párrafo que tiene el identificador <b>parrafo7</b> haciendo uso de la propiedad <span>innerHTML</span>.</li>
+                <li>Si el usuario no acierta el número, se deberá indicar un mensaje con tal consecuencia y con el número secreto en el párrafo que tiene el identificador <b>parrafo7</b> haciendo uso de la propiedad <span>innerHTML</span> y en color rojo.</li>
+            </ul>  
+            <label>Número maximo:</label>  
+            <input id="maximo" type="number"></input>
+            <label>Número de intentos:</label>  
+            <input id="intentos" type="number"></input>
+            <button onclick="nuneroSecreto();">Jugar</button>
+            <p id="parrafo7" class="parrafo">
+            </p>
+        </div>
+
+</body>
+</html>
